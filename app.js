@@ -349,6 +349,7 @@ function renderProducts() {
 
   visibleProducts.forEach(product => {
 
+    /*
     const productCategory = product.category || "Otros";
 
     if (productCategory !== currentCategory) {
@@ -361,7 +362,7 @@ function renderProducts() {
 
       list.append(categoryHeader);
     }
-
+    */
 
     const item = document.createElement("li");
     item.className = "product-item";
@@ -664,21 +665,5 @@ async function checkSession() {
     appContainer.hidden = true;
   }
 }
-//fin añadir función para comprobar la sesión
 
-/*logoutButton.addEventListener(
-  "click",
-  async () => {
-
-    const { error } =
-      await supabaseClient.auth.signOut();
-
-    if (error) {
-      console.error(error);
-      return;
-    }
-
-    location.reload();
-  }
-);*/
   
